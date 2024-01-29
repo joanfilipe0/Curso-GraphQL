@@ -1,11 +1,5 @@
 const { gql, ApolloServer } = require('apollo-server');
 
-/**
- * => Schema
- * -> Schema Definition Language ou Linguagem de Definição de Esquema
- * -> SDL
- */
-
 const produtos = [
 	{
 		id: 1,
@@ -16,6 +10,11 @@ const produtos = [
 		id: 2,
 		nome: 'TV',
 		valor: 6000.32
+	},
+	{
+		id: 3,
+		nome: 'Monitor',
+		valor: 2000.0
 	}
 ];
 
@@ -54,12 +53,18 @@ const typeDefs = gql`
 	type Query {
 		usuarios: [Usuario]
 		produtos: [Produto]
+		usuario(id: Int, nome: String): Usuario
 	}
 `;
 const resolvers = {
 	Query: {
 		usuarios() {
 			return usuarios;
+		},
+		usuario(_, args) {
+			const { id, nome } = args;
+			if (id) return usuarios.find((usuario) => usuario.id === id);
+			return usuarios.find((usuario) => usuario.nome === nome);
 		},
 		produtos() {
 			return produtos;
