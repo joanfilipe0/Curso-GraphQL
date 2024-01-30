@@ -1,5 +1,5 @@
 # Projeto de Curso Básico de GraphQL
-Bem-vindo ao repositório do Curso Básico de GraphQL! Este projeto serve como um guia prático para meu aprednizado em fundamentos do GraphQL, abrangendo consultas, argumentos, objetos e como instanciar o GraphQL em seu projeto.
+Bem-vindo ao repositório do Curso Básico de GraphQL! Este projeto serve como um guia prático para meu aprendizado em fundamentos do GraphQL, abrangendo consultas, argumentos, objetos e como instanciar o GraphQL em seu projeto.
 
 ## Sobre o Curso
 Este curso é projetado para iniciantes que desejam adquirir uma compreensão sólida dos conceitos básicos do GraphQL. Ele fornece uma introdução passo a passo, abordando os seguintes tópicos:
